@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:py="http://genshi.edgewall.org/">
+    <xi:include href="layout.html" />
+    <head>
+        <title>Abstimmungshilfe Plenum</title>
+    </head>
+    <body class="index">
+        <h1>Abstimmungshilfe Plenum</h1>
+
+        <div py:if="tops">
+            <div id="top" py:for="top in tops">
+                Top ${top.nummer}
+                <a href="https://redmine.piratenfraktion-nrw.de/issues/${top.ticketid}">#${top.ticketid}</a>
+                <p>${top.beschreibung}</p>
+                <div class="btn ${top.btn}">${top.abstimmungsempfehlung}</div>
+            </div>
+        </div>
+    </body>
+</html>
