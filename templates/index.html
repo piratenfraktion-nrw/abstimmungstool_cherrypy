@@ -11,7 +11,7 @@
 
         <div py:if="tops">
             <div id="top" py:for="top in tops">
-                Top ${top.nummer}
+                <b>Top ${top.nummer}</b>
                 <a href="https://redmine.piratenfraktion-nrw.de/issues/${top.ticketid}">#${top.ticketid}</a>
                 <p>${top.beschreibung}</p>
                 <div class="btn ${top.btn}">${top.abstimmungsempfehlung}</div>
